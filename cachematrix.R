@@ -22,7 +22,6 @@ cacheSolve <- function(x, ...) {
     if (!is.null(inv))
         return(inv)
     # else:
-    print("value not cached - calculating")
     mat <- x$get()
     inv <- solve(mat, ...)
     x$setinv(inv)
